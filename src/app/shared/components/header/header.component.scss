@@ -1,0 +1,13 @@
+.cart-header {
+  .logo {
+    margin-right: 4px;
+    border-radius: 50%;
+  }
+  .username {
+    display: flex;
+    align-items: center;
+    margin-right: 6px;
+    color: white;
+    text-transform: capitalize;
+  }
+}
