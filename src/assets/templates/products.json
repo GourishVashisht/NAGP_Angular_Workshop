@@ -1,0 +1,37 @@
+[
+  {
+    "id": "1",
+    "name": "M31 Dual Sim Phone",
+    "brand": "Samsung",
+    "color": "Navy Blue",
+    "price": 15000
+  },
+  {
+    "id": "2",
+    "name": "T-Shirt",
+    "brand": "Duke",
+    "color": "Black",
+    "price": 800
+  },
+  {
+    "id": "3",
+    "name": "Sports Shoes",
+    "brand": "Reebok",
+    "color": "White",
+    "price": 3500
+  },
+  {
+    "id": "4",
+    "name": "Moto G6 Plus Phone",
+    "brand": "Motorola",
+    "color": "Black",
+    "price": 20000
+  },
+  {
+    "id": "5",
+    "name": "Jacket",
+    "brand": "Woodland",
+    "color": "Black",
+    "price": 6000
+  }
+]

@@ -19,20 +19,20 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "@nagp/core": [
+        "src/app/core/public_api.ts"
+      ],
+      "@nagp/shared": [
+        "src/app/shared/public_api.ts"
+      ]
+    }
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
     "strictInjectionParameters": true,
     "strictInputAccessModifiers": true,
     "strictTemplates": true
-  },
-  "paths": {
-    "@nagp/core": [
-      "src/app/core/public_api.ts"
-    ],
-    "@nagp/shared": [
-      "src/app/shared/public_api.ts"
-    ]
   }
 }

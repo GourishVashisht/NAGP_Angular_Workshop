@@ -16,6 +16,10 @@
           <a class="nav-link" [routerLink]="['/home']"><i class="pi pi-home"></i><span style="margin-left: 4px;">Home
             </span></a>
         </li>
+        <li class=" nav-item" *ngIf="isLoggedInUser">
+          <a class="nav-link logout-button" (click)="logoutUser()"><i class="pi pi-sign-out"></i><span style="margin-left: 4px;">Logout
+            </span></a>
+        </li>
       </ul>
     </div>
   </nav>

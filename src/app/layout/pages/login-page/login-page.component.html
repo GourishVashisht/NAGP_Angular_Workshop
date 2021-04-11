@@ -1,0 +1,41 @@
+<div class="register-box">
+  <div class="container">
+    <div>
+      <span class="login-logo">
+        <i class="pi pi-user"></i>
+      </span>
+      <p class="register-title">User Login</p>
+    </div>
+    <form class="register-register-form">
+      <span class="icon-username">
+        <i class="pi pi-user"></i>
+      </span>
+      <fieldset class="register-input-container">
+        <div class="form-group" class="register-input-item">
+          <span class="ui-float-label">
+            <input id="float-username" type="text" name="username"
+              class="register-user-input-username register-user-input">
+            <label for="float-username">Username</label>
+          </span>
+        </div>
+      </fieldset>
+      <span class="icon-password">
+        <i class="pi pi-lock"></i>
+      </span>
+      <fieldset class="register-input-container register-password">
+        <div class="form-group" class="register-input-item">
+          <span class="ui-float-label">
+            <input id="float-password" type="password" name="password"
+              class="register-user-input-password register-user-input">
+            <label for="float-password">Password</label>
+          </span>
+        </div>
+      </fieldset>
+      <div class="register-register-button-container">
+        <button type="button" (click)="submitLoginForm()" class="register-register-button">
+          Submit
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

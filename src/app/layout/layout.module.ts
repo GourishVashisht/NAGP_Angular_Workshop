@@ -10,17 +10,21 @@ import { SharedModule } from '../shared/shared.module';
 import { MainPageComponent } from './pages/main-page/main-page.component';
 import { PrimeComponentsModule } from './prime-components.module';
 import { SearchProductComponent } from './components/search-product/search-product.component';
+import { ProductDetailComponent } from './components/product-detail/product-detail.component';
+import { FormsModule } from '@angular/forms';
 
 const components = [
   SearchProductComponent,
   MainPageComponent,
-  EmptyPageComponent
+  EmptyPageComponent,
+  ProductDetailComponent
 ];
 
 @NgModule({
   declarations: [components],
   imports: [
     CommonModule,
+    FormsModule,
     PrimeComponentsModule,
     LayoutRoutingModule,
     SharedModule,

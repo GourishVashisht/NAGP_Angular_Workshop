@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
-import { Subscription } from 'rxjs';
+import { ActivatedRoute, Router } from '@angular/router';
+import { Product } from '@nagp/core';
+import { map } from 'rxjs/operators';
 
 @Component({
   selector: 'app-search-product',
@@ -9,16 +10,18 @@ import { Subscription } from 'rxjs';
 })
 export class SearchProductComponent implements OnInit {
 
-  products: any[] = [];
-  
-  constructor(private readonly router: Router,
-  ) { }
+  products: Product[] = [];
+
+  constructor(private readonly route: ActivatedRoute, private readonly router: Router) { }
 
   ngOnInit() {
+    this.route.data.subscribe(data => {
+      this.products = data.productList;
+    })
   }
 
-
-  ngOnDestroy() {
+  viewProduct(productCode: string) {
+    this.router.navigateByUrl('/home/search/' + productCode);
   }
 
 }

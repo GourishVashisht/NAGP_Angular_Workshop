@@ -8,13 +8,19 @@ import { Router } from '@angular/router';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor(private router: Router,) {
+  isLoggedInUser: string = "";
+
+  constructor(private router: Router) {
 
   }
 
   ngOnInit() {
+    this.isLoggedInUser = JSON.stringify(localStorage.getItem('isLoggedIn'));
   }
 
-
+  logoutUser() {
+    localStorage.removeItem('isLoggedIn');
+    this.router.navigateByUrl('/login');
+  }
 
 }

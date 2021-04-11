@@ -1,21 +1,26 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Observable, of } from 'rxjs';
+import { filter, map, tap } from 'rxjs/operators';
+import { Product } from '../models';
 
 @Injectable({
   providedIn: 'root'
 })
-export class CartService {
+export class ProductService {
 
-  private CART_SERVICE_BASE_URL = "http://35.223.97.142:8080/v1/cart";
+  private PRODUCT_SERVICE_BASE_URL = "/assets/templates";
 
   constructor(private readonly http: HttpClient) { }
 
-  // public getUserCart(cartId: string): Observable<Cart> {
-  //   const url = `${this.CART_SERVICE_BASE_URL}/${cartId}`;
-  //   return this.http.get<Cart>(url, {
-  //     headers: this.createHttpHeaders()
-  //   });
-  // }
+  public getProducts(): Observable<Product[]> {
+    const url = `${this.PRODUCT_SERVICE_BASE_URL}/products.json`;
+    return this.http.get<Product[]>(url);
+  }
+
+  public getProduct(productId: string): Observable<Product> {
+    const url = `${this.PRODUCT_SERVICE_BASE_URL}/product.json`;
+    return this.http.get<Product>(url);
+  }
 
 }
